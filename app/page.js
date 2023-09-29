@@ -1,3 +1,9 @@
+import Block from '@/components/block/Block';
+
 export default function Home() {
-  return <main>Hello Blocks</main>;
+  return (
+    <main>
+      <Block />
+    </main>
+  );
 }
