@@ -7,7 +7,6 @@ export default function Builder() {
   const [blocks, setBlocks] = useState([]);
 
   const addBlock = () => {
-    console.log('clicked');
     setBlocks((prev) => [
       ...prev,
       {
@@ -15,8 +14,6 @@ export default function Builder() {
       },
     ]);
   };
-
-  console.log(blocks);
 
   return (
     <main>
