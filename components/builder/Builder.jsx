@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Block from '../block/Block';
+import styles from './Builder.module.css';
 
 export default function Builder() {
   const [blocks, setBlocks] = useState([]);
@@ -16,7 +17,7 @@ export default function Builder() {
   };
 
   return (
-    <main>
+    <main className={styles.Builder}>
       <section>
         <p>Click on the button to build a block.</p>
         <button onClick={addBlock}>Build</button>
