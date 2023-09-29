@@ -1,9 +1,5 @@
-import Block from '@/components/block/Block';
+import Builder from '@/components/builder/Builder';
 
 export default function Home() {
-  return (
-    <main>
-      <Block />
-    </main>
-  );
+  return <Builder />;
 }
