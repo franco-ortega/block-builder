@@ -1,0 +1,8 @@
+.Block {
+  background-color: green;
+
+  margin: 0.25rem;
+
+  width: 100px;
+  aspect-ratio: 1/1;
+}

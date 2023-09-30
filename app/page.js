@@ -1,3 +1,5 @@
+import Builder from '@/components/builder/Builder';
+
 export default function Home() {
-  return <main>Hello Blocks</main>;
+  return <Builder />;
 }
