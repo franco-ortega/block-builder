@@ -5,4 +5,15 @@
 
   width: var(--block-size);
   height: var(--block-size);
+
+  animation: 2s 1 normal dropBlock;
+}
+
+@keyframes dropBlock {
+  0% {
+    transform: translateY(-30rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
 }
