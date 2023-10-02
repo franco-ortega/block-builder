@@ -1,9 +1,16 @@
 .Builder {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 .Builder button {
+  margin-block: 1rem;
   padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.Builder section + section {
+  height: 40rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
