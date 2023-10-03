@@ -9,10 +9,10 @@ export default function Builder() {
 
   const addBlock = () => {
     setBlocks((prev) => [
-      ...prev,
       {
         id: Math.random().toFixed(4) * 10000,
       },
+      ...prev,
     ]);
   };
 
