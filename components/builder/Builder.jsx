@@ -11,6 +11,7 @@ export default function Builder() {
     setBlocks((prev) => [
       {
         id: Math.random().toFixed(4) * 10000,
+        color: 'green',
       },
       ...prev,
     ]);
@@ -23,8 +24,8 @@ export default function Builder() {
         <button onClick={addBlock}>Build</button>
       </section>
       <section>
-        {blocks.map(({ id }) => (
-          <Block key={id} />
+        {blocks.map(({ id, color }) => (
+          <Block key={id} color={color} />
         ))}
       </section>
     </main>
