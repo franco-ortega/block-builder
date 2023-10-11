@@ -9,6 +9,8 @@ export default function Builder() {
   const [blockColor, setBlockColor] = useState('');
 
   const addBlock = () => {
+    if (!blockColor) return;
+
     setBlocks((prev) => [
       {
         id: Math.random().toFixed(4) * 10000,
@@ -18,11 +20,14 @@ export default function Builder() {
     ]);
   };
 
+  console.log(blocks);
+
   return (
     <main className={styles.Builder}>
       <section>
         <p>Select a color.</p>
         <select onChange={(e) => setBlockColor(e.target.value)}>
+          <option value=''></option>
           <option value='red'>Red</option>
           <option value='green'>Green</option>
           <option value='blue'>Blue</option>
