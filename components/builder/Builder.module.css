@@ -1,8 +1,13 @@
-.Builder {
+.Builder section:first-child {
+  text-align: center;
+}
+
+.Builder section p {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .Builder button {
-  margin-block: 1rem;
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
 }

@@ -21,14 +21,15 @@ export default function Builder() {
   return (
     <main className={styles.Builder}>
       <section>
-        <p>Click on the button to build a block.</p>
-        <button onClick={addBlock}>Build</button>
-        <p>Select color</p>
+        <p>Select a color.</p>
         <select onChange={(e) => setBlockColor(e.target.value)}>
           <option value='red'>Red</option>
           <option value='green'>Green</option>
           <option value='blue'>Blue</option>
         </select>
+
+        <p>Build a block.</p>
+        <button onClick={addBlock}>Build</button>
       </section>
       <section>
         {blocks.map(({ id, color }) => (
