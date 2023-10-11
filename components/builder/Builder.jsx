@@ -7,9 +7,15 @@ import styles from './Builder.module.css';
 export default function Builder() {
   const [blocks, setBlocks] = useState([]);
   const [blockColor, setBlockColor] = useState('');
+  const [colorlessError, setColorlessError] = useState(false);
 
   const addBlock = () => {
-    if (!blockColor) return;
+    if (!blockColor) {
+      setColorlessError(true);
+      return;
+    }
+
+    if (colorlessError) setColorlessError((prev) => !prev);
 
     setBlocks((prev) => [
       {
@@ -21,6 +27,7 @@ export default function Builder() {
   };
 
   console.log(blocks);
+  console.log(colorlessError);
 
   return (
     <main className={styles.Builder}>
@@ -36,6 +43,11 @@ export default function Builder() {
         <p>Build a block.</p>
         <button onClick={addBlock}>Build</button>
       </section>
+      {colorlessError ? (
+        <section>
+          <p>Please select a color.</p>
+        </section>
+      ) : null}
       <section>
         {blocks.map(({ id, color }) => (
           <Block key={id} color={color} />

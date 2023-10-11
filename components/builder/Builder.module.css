@@ -12,8 +12,8 @@
   border-radius: 0.5rem;
 }
 
-.Builder section + section {
-  height: 40rem;
+.Builder section:last-child {
+  height: 30rem;
   overflow: hidden;
 
   display: flex;
