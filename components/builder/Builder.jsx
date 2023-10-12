@@ -42,12 +42,13 @@ export default function Builder() {
 
         <p>Build a block.</p>
         <button onClick={addBlock}>Build</button>
+
+        {colorlessError ? (
+          <div>
+            <p>Please select a color.</p>
+          </div>
+        ) : null}
       </section>
-      {colorlessError ? (
-        <section>
-          <p>Please select a color.</p>
-        </section>
-      ) : null}
       <section>
         {blocks.map(({ id, color }) => (
           <Block key={id} color={color} />

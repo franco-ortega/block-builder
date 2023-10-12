@@ -1,4 +1,4 @@
-.Builder section:first-child {
+.Builder section {
   text-align: center;
 }
 
@@ -19,4 +19,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  border: white dashed 1px;
 }
