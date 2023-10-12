@@ -26,9 +26,6 @@ export default function Builder() {
     ]);
   };
 
-  console.log(blocks);
-  console.log(colorlessError);
-
   return (
     <main className={styles.Builder}>
       <section>
@@ -43,11 +40,7 @@ export default function Builder() {
         <p>Build a block.</p>
         <button onClick={addBlock}>Build</button>
 
-        {colorlessError ? (
-          <div>
-            <p>Please select a color.</p>
-          </div>
-        ) : null}
+        {colorlessError ? <p>Please select a color.</p> : null}
       </section>
       <section>
         {blocks.map(({ id, color }) => (
