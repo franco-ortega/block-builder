@@ -1,14 +1,19 @@
-.Builder {
+.Builder section {
+  text-align: center;
+}
+
+.Builder section p {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .Builder button {
-  margin-block: 1rem;
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
 }
 
-.Builder section + section {
-  height: 40rem;
+.Builder section:last-child {
+  height: 30rem;
   overflow: hidden;
 
   display: flex;
